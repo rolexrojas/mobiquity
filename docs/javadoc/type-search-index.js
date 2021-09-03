@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.mobiquity.exception","l":"APIException"},{"p":"com.mobiquity.types","l":"CurrencyEnum"},{"p":"com.mobiquity","l":"MobiquityApp"},{"p":"com.mobiquity.domain","l":"Package"},{"p":"com.mobiquity.domain","l":"PackageItem"},{"p":"com.mobiquity.packer","l":"Packer"},{"p":"com.mobiquity.util","l":"Utility"}]
