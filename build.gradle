@@ -3,6 +3,10 @@ plugins {
   id 'maven-publish'
 }
 
+task myJavadocs(type: Javadoc) {
+  source = sourceSets.main.allJava
+}
+
 group 'com.mobiquity'
 version '1.0-SNAPSHOT'
 

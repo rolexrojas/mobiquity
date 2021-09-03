@@ -26,7 +26,7 @@ public class Packer {
 
   /**
    * The Packer class
-   * @Param filePath location of a file to be loaded into static pack method
+   * @param filePath location of a file to be loaded into static pack method
    * @return String displaying the index of items packaged into main pack
    */
     public static String pack(String filePath) throws APIException {
