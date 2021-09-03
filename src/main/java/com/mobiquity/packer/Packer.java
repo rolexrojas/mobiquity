@@ -28,6 +28,7 @@ public class Packer {
    * The Packer class
    * @param filePath location of a file to be loaded into static pack method
    * @return String displaying the index of items packaged into main pack
+   * @throws APIException for bad input or as exception Wrapper
    */
     public static String pack(String filePath) throws APIException {
 
