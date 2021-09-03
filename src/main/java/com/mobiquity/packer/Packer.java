@@ -1,19 +1,19 @@
 package com.mobiquity.packer;
 
+import com.mobiquity.component.PackageValidator;
 import com.mobiquity.domain.Package;
 import com.mobiquity.domain.PackageItem;
 import com.mobiquity.util.Utility;
 import com.mobiquity.exception.APIException;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.IntStream;
 
 public class Packer {
@@ -33,6 +33,7 @@ public class Packer {
     public static String pack(String filePath) throws APIException {
 
         StringBuilder responseBuilder = new StringBuilder();
+
         try {
             //setup file path
             Path path = FileSystems.getDefault().getPath(filePath);
@@ -74,6 +75,7 @@ public class Packer {
 
                 //set packageItemList inside of packed initial object
                 packageList.get(counter).setAllPackedItemList(packageItems);
+
                 //increment counter for next iteration
                 counter++;
             });
@@ -85,6 +87,8 @@ public class Packer {
 
         //iterates over individual package list and append result to StringBuilder
         for (Package aPackage : packageList) {
+            //execute contraints validations
+            PackageValidator.isValidPackageItem(aPackage);
             responseBuilder.append(combineDynamicValuesForMostExpensiveCombo(aPackage.getAllPackedItemList(), (double) aPackage.getPackageWeight()));
         }
 
