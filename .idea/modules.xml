@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/implementation.iml" filepath="$PROJECT_DIR$/implementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobiquity.iml" filepath="$PROJECT_DIR$/.idea/modules/mobiquity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobiquity.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mobiquity.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobiquity.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mobiquity.test.iml" />
+    </modules>
+  </component>
+</project>
